@@ -1,0 +1,531 @@
+/* font, cursor, box sizing (for margins), and selectability */
+* {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    cursor: default;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none; }
+
+/* remove margins and set background */
+body {
+    margin: 0px;
+    background-image:url(img/diamond_upholstery.png); }
+
+/* link for bottom of page */
+a {
+    color: red;
+    text-decoration: none; }
+a:hover {
+    color: blue;
+    cursor: pointer; }
+
+/* custom scrollbar */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5; }
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #F5F5F5; }
+::-webkit-scrollbar-thumb { background-color: #000000; }
+
+/* a container for text that is vertically centered */
+.textContainer {
+    text-align: center;
+    display: table; }
+
+/* the text inside the container */
+.text {
+    display: table-cell;
+    vertical-align: middle; }
+
+/* container for title and game */
+#container {
+    position: absolute;
+    top: 0;
+    bottom: 50px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    height: 700px;
+    width: 1000px;
+}
+
+#containerSide {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 70px;
+    height: 610px;
+    margin-top: auto;
+    margin-bottom: auto;
+    background-color: white;
+    border: 1px solid black;
+    z-index: 9;
+}
+
+#containerTitle {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 20px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    font-size: 50px;
+}
+
+/* main container for game */
+#containerGame {
+    position: absolute;
+    bottom: 0;
+    height: 600px;
+    width: 1000px;
+    border: 2px solid black;
+    background-color: #EEEEEE; }
+
+#containerLeft {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 60%;
+    border-right: 2px solid black;
+}
+
+#containerRight {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 40%;
+}
+
+#investments {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    height: 5%;
+    width: 30%;
+    font-size: 22px;
+}
+
+#money {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    height: 5%;
+    width: 60%;
+    text-align: right;
+    font-size: 22px;
+}
+
+#containerBuildings {
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    width: 90%;
+    height: 80%;
+}
+
+.building {
+    position: absolute;
+    width: 50%;
+    height: 20%; }
+#building1 {
+    top: 0%;
+    left: 0%; }
+#building2 {
+    top: 20%;
+    left: 0%; }
+#building3 {
+    top: 40%;
+    left: 0%; }
+
+.button {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 70px;
+    background-color: #EEEEEE;
+    z-index: 2;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    transition: 0.1s; }
+.button:hover { background-color: #DDDDDD; }
+.button:active { background-color: #BBBBBB; }
+.unbutton {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    bottom: 10px;
+    width: 70px;
+    background-color: #888888;
+    z-index: 1; }
+
+.progress {
+    position: absolute;
+    left: 90px;
+    right: 10px;
+    bottom: 10px;
+    height: 30px;
+    background-color: black;
+}
+
+.containerBar{
+    position: absolute;
+    left: 3px;
+    right: 3px;
+    top: 3px;
+    bottom: 3px;
+}
+
+.name {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    left: 3px;
+    top: -2px;
+    font-size: 10px;
+    color: white;
+    z-index: 2;
+}
+
+.inc {
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    left: 3px;
+    bottom: 3px;
+    font-size: 10px;
+    color: white;
+    z-index: 2;
+}
+
+.bar {
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    background-color: green;
+}
+
+.owned {
+    position: absolute;
+    top: 10px;
+    left: 90px;
+    height: 30px;
+    width: 60px;
+    font-size: 13px;
+}
+
+.cost {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 150px;
+    text-align: right;
+    font-size: 13px;
+}
+
+.clickme {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #777777;
+    z-index: 2;
+    transition: 0.1s; }
+.clickme:hover { background-color: #555555; }
+.clickme:active { background-color: black }
+
+.block {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 3;
+}
+
+#containerDisplay {
+    position: absolute;
+    left: 5%;
+    top: 2.5%;
+    width: 90%;
+    height: 75%;
+    /*	background-color: green;
+    */}
+
+#containerMenu {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+}
+
+.menu {
+    position: absolute;
+    width: 42.5%;
+    height: 35%;
+    background-color: #CCCCCC;
+    transition: 0.1s; }
+.menu:hover { background-color: #999999; }
+.menu:active { background-color: #777777; }
+
+#menu1 {
+    top: 10%;
+    left: 5%; }
+#menu2 {
+    top: 10%;
+    right: 5%; }
+
+.display {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    overflow: auto;
+}
+
+#display0 {
+    display: initial;
+    overflow: hidden;
+}
+
+#moneypic {
+    width: 100%;
+    height: 100%;
+}
+
+.menuTitle {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.containerBuyAll {
+    position: relative;
+    width: 100%;
+    height: 40px;
+}
+
+.buyAll {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 25%;
+    height: 75%;
+    background-color: #CCCCCC; }
+.buyAll:hover { background-color: #999999; }
+.buyAll:active { background-color: #777777; }
+
+.upgrade {
+    position: relative;
+    width: 100%;
+    height: 100px;
+}
+
+.upgradeButton {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    background-color: #EEEEEE;
+    z-index: 2;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,.35);
+    transition: 0.1s; }
+.upgradeButton:hover { background-color: #DDDDDD; }
+.upgradeButton:active { background-color: #BBBBBB; }
+.unupbutton {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    background-color: #888888;
+    z-index: 1;
+}
+
+.bought {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    z-index: 3;
+    background-color: yellow;
+    border: 1px solid black;
+    display: none;
+}
+
+.upgradeName {
+    position: absolute;
+    top: 10px;
+    left: 70px;
+    right: 10px;
+    height: 20px;
+    font-size: 18px;
+}
+
+.upgradeText {
+    position: absolute;
+    top: 38px;
+    left: 70px;
+    right: 10px;
+    height: 20px;
+    font-size: 13px;
+}
+
+.upgradePrice {
+    position: absolute;
+    bottom: 13px;
+    left: 70px;
+    right: 10px;
+    height: 20px;
+    font-size: 20px;
+}
+
+
+#test1 {
+    width: 100%;
+    height: 50px;
+    background-color: green;
+}
+
+#test2 {
+    width: 359px;
+    height: 50px;
+    background-color: blue;
+}
+
+
+.box {
+    width: 58px;
+    height: 58px;
+    float: left;
+    position: relative; }
+.box2 {
+    width: 20px;
+    height: 58px;
+    float: left;
+    position: relative; }
+
+.inside {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    bottom: 5px;
+    right: 5px;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.show {
+    position: absolute;
+    top: -50px;
+    left: -57px;
+    width: 173px;
+    height: 61px;
+    background-color: #DDDDDD;
+    border: 1px solid black;
+    z-index: 1;
+    text-align: center;
+    display: none;
+}
+
+.inside:hover + .show {
+    display: initial;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.achieveText1 {
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    font-size: 12px;
+}
+
+.achieveText2 {
+    position: absolute;
+    top: 22px;
+    width: 100%;
+    font-size: 10px;
+}
+
+.achieveText3 {
+    position: absolute;
+    top: 37px;
+    width: 100%;
+    font-size: 10px;
+}
+
+.breakLine {
+    width: 100%;
+    height: 10px;
+}
+
+.settingBox {
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.topText {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+}
+
+.bottomText {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    font-size: 16px;
+}
+
+#asdf1 {
+    width: 100%;
+    height: 35px;
+    position: relative;
+}
+
+#asdf2 {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-size: 13px;
+}
+
+#softReset, #hardReset {
+    position: absolute;
+    top: 10px;
+    height: 60px;
+    width: 120px;
+    background-color: #CCCCCC;
+    transition: 0.2s;
+    display: table;
+    text-align: center; }
+#softReset:hover, #hardReset:hover { background-color: #999999; }
+#softReset { left: 30px; }
+#hardReset { right: 30px; }
+
+.resetText {
+    display: table-cell;
+    vertical-align: middle;
+}

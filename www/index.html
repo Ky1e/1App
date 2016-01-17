@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+    <link href="css/styles.css.css" rel="stylesheet">
+    <script src="js/script.js"></script>
+
+    <link href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/routes.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/directives.js"></script>
+
+  </head>
+  <body ng-app="app" animation="slide-left-right-ios7">
+  <div>
+    <div id="investments"> Investments </div>
+    <div id="money"></div>
+
+    <div id="containerBuildings">
+
+      <div id="building1" class="building">
+        <div id="button1" class="button" onclick="buyBuilding(1)"></div>
+        <div class="unbutton"></div>
+        <div class="progress">
+          <div class="containerBar">
+            <div class="name name1"></div>
+            <div class="inc inc1"></div>
+            <div id="bar1" class="bar"></div>
+          </div>
+          <div id="clickme1" class="clickme" onclick="clickme(1)">
+            <div class="containerBar">
+              <div class="name name1"></div>
+              <div class="inc inc1"></div>
+            </div>
+          </div>
+          <div id="block1" class="block">
+            <div class="containerBar">
+              <div class="name name1"></div>
+              <div class="inc inc1"></div>
+            </div>
+          </div>
+        </div>
+        <div id="owned1" class="owned"></div>
+        <div id="cost1" class="cost"></div>
+      </div>
+
+      <div id="building2" class="building">
+        <div id="button2" class="button" onclick="buyBuilding(2)"></div>
+        <div class="unbutton"></div>
+        <div class="progress">
+          <div class="containerBar">
+            <div class="name name2"></div>
+            <div class="inc inc2"></div>
+            <div id="bar2" class="bar"></div>
+          </div>
+          <div id="clickme2" class="clickme" onclick="clickme(2)">
+            <div class="containerBar">
+              <div class="name name2"></div>
+              <div class="inc inc2"></div>
+            </div>
+          </div>
+          <div id="block2" class="block">
+            <div class="containerBar">
+              <div class="name name2"></div>
+              <div class="inc inc2"></div>
+            </div>
+          </div>
+        </div>
+        <div id="owned2" class="owned"></div>
+        <div id="cost2" class="cost"></div>
+      </div>
+
+      <div id="building3" class="building">
+        <div id="button3" class="button" onclick="buyBuilding(3)"></div>
+        <div class="unbutton"></div>
+        <div class="progress">
+          <div class="containerBar">
+            <div class="name name3"></div>
+            <div class="inc inc3"></div>
+            <div id="bar3" class="bar"></div>
+          </div>
+          <div id="clickme3" class="clickme" onclick="clickme(3)">
+            <div class="containerBar">
+              <div class="name name3"></div>
+              <div class="inc inc3"></div>
+            </div>
+          </div>
+          <div id="block3" class="block">
+            <div class="containerBar">
+              <div class="name name3"></div>
+              <div class="inc inc3"></div>
+            </div>
+          </div>
+        </div>
+        <div id="owned3" class="owned"></div>
+        <div id="cost3" class="cost"></div>
+      </div>
+    </div>
+  </div>
+    <div>
+        <ion-nav-bar class="bar-stable">
+            <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+        </ion-nav-bar>
+        <ion-nav-view></ion-nav-view>
+    </div>
+</div>
+  </body>
+</html>
